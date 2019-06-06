@@ -1,0 +1,6 @@
+TODO
+
+General
+- Create README that looks nice on github.
+
+change temp

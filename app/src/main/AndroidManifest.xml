@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.vale.fitnessapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWithoutActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NewEntryActivity"
+            android:parentActivityName=".AllEntriesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AllEntriesActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PopDeleteAll"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.CustomPopUpTheme" />
+        <activity
+            android:name=".ThisEntryActivity"
+            android:parentActivityName=".AllEntriesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditEntryActivity"
+            android:parentActivityName=".ThisEntryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AllEntriesGraphActivity"
+            android:label="@string/graph_activity_name"
+            android:parentActivityName=".AllEntriesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".personal_record.PersonalRecordsActivity"
+            android:label="Personal Records"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal_record.NewPersonalRecordActivity"
+            android:parentActivityName=".personal_record.PersonalRecordsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal_record.PopDeleteAllRecords"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.CustomPopUpTheme" />
+        <activity
+            android:name=".personal_record.ThisRecordActivity"
+            android:parentActivityName=".personal_record.PersonalRecordsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal_record.EditRecordActivity"
+            android:parentActivityName=".personal_record.ThisRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".timer.TimerActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".timer.ActiveTimerActivity"
+            android:parentActivityName=".timer.TimerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".timer.TimerDoneActivity"
+            android:parentActivityName=".timer.TimerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".timer.SoundActivity"
+            android:parentActivityName=".timer.TimerActivity"
+            android:screenOrientation="portrait" ></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vale.fitnessapp.timer.TimerActivity">
+
+    <ImageButton
+        android:id="@+id/btnNightMode"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/cumstom_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rsz_moon" />
+
+    <ImageButton
+        android:id="@+id/btnSound"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/cumstom_button"
+        app:srcCompat="@drawable/note2"
+        app:layout_constraintRight_toLeftOf="@+id/btnNightMode"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNightMode"
+        android:layout_marginBottom="0dp" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/cumstom_button"
+        android:text="Start"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout5" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewSets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Sets"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/textViewSet"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/relativeLayout3"
+            android:layout_alignStart="@+id/relativeLayout3"
+            android:layout_below="@+id/textViewSets"
+            android:layout_marginTop="13dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="1"
+            android:maxLength="4"
+            android:textColor="@color/colorAccent3"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnSub1"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignBaseline="@+id/textViewSet"
+            android:layout_alignBottom="@+id/textViewSet"
+            android:layout_toLeftOf="@+id/textViewSet"
+            android:layout_toStartOf="@+id/textViewSet"
+            android:background="@drawable/custom_button_timer"
+            android:text="-"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnAdd1"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignBaseline="@+id/textViewSet"
+            android:layout_alignBottom="@+id/textViewSet"
+            android:layout_toEndOf="@+id/textViewSet"
+            android:layout_toRightOf="@+id/textViewSet"
+            android:background="@drawable/custom_button_timer"
+            android:text="+"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnAdd1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:gravity="center"
+            android:text="Work Interval"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnSub2"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignLeft="@+id/btnSub1"
+            android:layout_alignStart="@+id/btnSub1"
+            android:layout_alignTop="@+id/relativeLayout3"
+            android:background="@drawable/custom_button_timer"
+            android:text="-"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/textView8"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp">
+
+            <EditText
+                android:id="@+id/textViewWorkIntervalSec"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView10"
+                android:layout_alignBottom="@+id/textView10"
+                android:layout_toEndOf="@+id/textView10"
+                android:layout_toRightOf="@+id/textView10"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:text="00"
+                android:textColor="@color/colorAccent3"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/textViewWorkIntervalMin"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView10"
+                android:layout_alignBottom="@+id/textView10"
+                android:layout_toLeftOf="@+id/textView10"
+                android:layout_toStartOf="@+id/textView10"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:text="01"
+                android:textColor="@color/colorAccent3"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text=":"
+                android:textSize="24sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnAdd2"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignTop="@+id/relativeLayout3"
+            android:layout_toEndOf="@+id/relativeLayout3"
+            android:layout_toRightOf="@+id/relativeLayout3"
+            android:background="@drawable/custom_button_timer"
+            android:text="+"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSub2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:text="Rest Interval"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/textView13"
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@+id/btnSub2"
+            android:layout_toRightOf="@+id/btnSub2">
+
+            <EditText
+                android:id="@+id/textViewRestIntervalSec"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView14"
+                android:layout_alignBottom="@+id/textView14"
+                android:layout_toEndOf="@+id/textView14"
+                android:layout_toRightOf="@+id/textView14"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:text="30"
+                android:textColor="@color/colorAccent3"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/textViewRestIntervalMin"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView14"
+                android:layout_alignBottom="@+id/textView14"
+                android:layout_toLeftOf="@+id/textView14"
+                android:layout_toStartOf="@+id/textView14"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:text="00"
+                android:textColor="@color/colorAccent3"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text=":"
+                android:textSize="24sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSub3"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignTop="@+id/relativeLayout4"
+            android:layout_toLeftOf="@+id/relativeLayout4"
+            android:layout_toStartOf="@+id/relativeLayout4"
+            android:background="@drawable/custom_button_timer"
+            android:text="-"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnAdd3"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignTop="@+id/relativeLayout4"
+            android:layout_toEndOf="@+id/relativeLayout4"
+            android:layout_toRightOf="@+id/relativeLayout4"
+            android:background="@drawable/custom_button_timer"
+            android:text="+"
+            android:textColor="@android:color/background_light" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
