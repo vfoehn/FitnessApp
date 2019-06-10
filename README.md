@@ -9,4 +9,4 @@ FitnessApp is an Android app that was created using Android Studio. It has two m
 
 This application can be installed on an Android device by opening the folder in Android Studio. In Android Studio, one needs to select the *Run 'app'* option. If the device is connected to the computer, it should appear under *Connected Devices*. Once the device is selected, the application should be installed.
 
-Important: *Developer Options* needs to be activated on the device.
+Important: *Developer Options* need to be activated on the device.
